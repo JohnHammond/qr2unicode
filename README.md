@@ -9,7 +9,7 @@ Crappy Python code to transform a QR code into "plaintext" Unicode characters.
 
 ## Quickstart
 
-Use a virtual environment, ya monkies.
+Use a virtual environment, ya monkeys.
 
 ```bash
 python3 -m venv env
