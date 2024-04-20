@@ -214,6 +214,7 @@ def main():
 
     return
 
+# added so this can be imported into other projects.
 if __name__ == "__main__":
     main()
 
