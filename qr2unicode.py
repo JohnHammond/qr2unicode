@@ -202,9 +202,11 @@ def main():
 
     try:
         converter = Converter(args.input, args.output, args.verbose)
+
         success, message = converter.convertQRCode()
         if not(success):
             raise ValueError(message)
+        
         print(f"[+] {message}")
     except Exception as ex:
         print(f"[-] {message}")
