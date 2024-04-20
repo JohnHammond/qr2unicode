@@ -111,6 +111,11 @@ class Converter:
         width = int()
 
         try:
+            # reset the __using_temp_file variable. this is to protect
+            # against misconfigurations if the class vars get updated
+            # and this function gets rerun.
+            self.__using_temp_file = False
+
             if self.input.is_file() and self.__is_image_file(self.input):
                 img = Image.open(self.input).convert('L')
             elif not(self.input.exists()):
