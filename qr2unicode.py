@@ -9,7 +9,7 @@ import qrcode
 from pathlib import Path
 import magic  # Import the magic library
 
-class Converter:
+class QRConverter:
     """
     class designed to convert a QR code to unicode.
     """
@@ -206,7 +206,7 @@ def main():
     args = parser.parse_args()
 
     try:
-        converter = Converter(args.input, args.output, args.verbose)
+        converter = QRConverter(args.input, args.output, args.verbose)
 
         success, message = converter.convertQRCode()
         if not(success):
